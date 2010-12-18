@@ -31,6 +31,7 @@ task :clean do
   ant.delete :quiet => true, :dir => 'dist'
 end
 
+desc "build mirah parser jar"
 task :build_parser => 'dist/mirah-parser.jar'
 
 file 'dist/mirah-parser.jar' => ['build/mirah/impl/MirahParser.class'] do
